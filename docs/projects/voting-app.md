@@ -52,7 +52,7 @@ Build your own images (if you have the app code locally)
 
 Assuming you have directories like ./vote, ./result, ./worker each with a Dockerfile.
 
-Bash (Git Bash / WSL):
+```Bash (Git Bash / WSL):
 
 AWS_ACCOUNT_ID=<YOUR_AWS_ACCOUNT_ID>
 AWS_REGION=<YOUR_REGION>
@@ -77,7 +77,7 @@ docker push  "$URI/result:latest"
 
 docker build -t worker:latest ./worker
 docker tag   worker:latest     "$URI/worker:latest"
-docker push  "$URI/worker:latest"
+docker push  "$URI/worker:latest"```
 
 
 PowerShell:
