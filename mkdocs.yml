@@ -1,1 +1,5 @@
-site_name: My Docs
+site_name: Uthman Adeleye — Docs as Code
+repo_url: https://github.com/Uthmanade001/docs-as-code-portfolio
+theme:
+  name: material
+
