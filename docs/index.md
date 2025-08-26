@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# DevOps Portfolio — Uthman Adeleye
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+This site documents real hands-on work:
+- **Kubernetes (EKS)** with Terraform & Helm
+- **CI/CD** with GitHub Actions (build, test, deploy)
+- **AWS** (ECR, EC2 via SSM, CloudWatch)
+- **Containers** (Docker, Compose)
+- **Runbooks** for on-call
 
-## Commands
+> Built with **Docs as Code**: Markdown + Git + GitHub Actions → auto-deployed to GitHub Pages.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
