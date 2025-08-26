@@ -10,3 +10,5 @@ This portfolio demonstrates my practical experience in:
 - **Docs as Code** for runbooks and project knowledge
 
 > This site is automatically built and deployed on every push using MkDocs + GitHub Actions.
+
+![Voting App Architecture](docs/assets/img/vote-arch.png)
