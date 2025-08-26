@@ -45,3 +45,5 @@ aws ssm send-command \
 Apply Kubernetes manifests (Deployments + Services)
 
 Rollout: kubectl rollout status deployment/vote
+
+![Voting App UI](../assets/img/vote-arch.png.png)
