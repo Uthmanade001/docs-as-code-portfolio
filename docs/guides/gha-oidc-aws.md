@@ -13,10 +13,10 @@ Instead of long-lived AWS keys in GitHub, I used **OIDC** so workflows assume a 
 3. In GitHub Actions:
 ```yaml
 permissions:
-  id-token: write
-  contents: read
+  id-token: `write`
+  contents: `read`
 
-- uses: aws-actions/configure-aws-credentials@v4
+- uses: `aws-actions/configure-aws-credentials@v4`
   with:
-    role-to-assume: arn:aws:iam::<acct>:role/GitHubOIDCDeployRole
-    aws-region: eu-west-2
+    role-to-assume: `arn:aws:iam::<acct>:role/GitHubOIDCDeployRole`
+    aws-region: `eu-west-2`

@@ -39,12 +39,12 @@ Pull the official Voting App images → tag them to your ECR → push.
 
 Bash (Git Bash / WSL):
 
-AWS_ACCOUNT_ID=<YOUR_AWS_ACCOUNT_ID>
-AWS_REGION=<YOUR_REGION>
-URI="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com"
+`AWS_ACCOUNT_ID=<YOUR_AWS_ACCOUNT_ID>`
+`AWS_REGION=<YOUR_REGION>`
+`URI="$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com"`
 
-aws ecr get-login-password --region "$AWS_REGION" \
-  | docker login --username AWS --password-stdin "$URI"
+`aws ecr get-login-password --region "$AWS_REGION" \`
+ ` | docker login --username AWS --password-stdin "$URI"`
 
 # Create repos if they don’t exist
 for repo in vote result worker; do
