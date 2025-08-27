@@ -62,11 +62,15 @@ done
 ✅ After this, your images are available in ECR as:
 
 $URI/vote:latest
+
 $URI/result:latest
+
 $URI/worker:latest
+
 ![ECR Push](../assets/img/Screenshot%202025-08-11%20120617.png)
 
 2. Build your own images (if you have the app code locally)
+
 docker build -t vote:latest ./vote
 docker tag vote:latest $URI/vote:latest
 docker push $URI/vote:latest
@@ -80,10 +84,11 @@ docker tag worker:latest $URI/worker:latest
 docker push $URI/worker:latest
 
 💻 Deploy on EC2 via SSM (no SSH)
+---
 INSTANCE_ID=i-xxxxxxxx
 AWS_REGION=<YOUR_REGION>
 URI=<your-ecr-uri>
-
+---
 aws ssm send-command \
   --document-name "AWS-RunShellScript" \
   --targets "Key=instanceIds,Values=$INSTANCE_ID" \
@@ -93,6 +98,7 @@ aws ssm send-command \
     "docker run -d --name worker             '"$URI"'/worker:latest"
   ]' \
   --region $AWS_REGION
+---
 
 ☸️ Deploy on EKS (optional)
 Apply Kubernetes manifests or Helm charts
@@ -100,9 +106,13 @@ Verify rollout:
 kubectl rollout status deploy/vote -n prod
 
 🔄 CI/CD with GitHub Actions
+
 Build & Push images to ECR
+
 Deploy to EC2 via SSM or EKS via kubectl
+
 Secure with OIDC (no long-lived AWS keys)
+
 Example (ECR login step):
 - uses: aws-actions/amazon-ecr-login@v2
 ![GitHub Actions Deploy](../assets/img/Screenshot%202025-08-15%20201605%20-%20Copy.png)
@@ -122,7 +132,3 @@ Importance of runbooks for debugging (CrashLoopBackOff, push errors, etc.)
 
 
 ---
-
-👉 Now if you paste this into your file and redeploy, your **Bash**, **PowerShell**, and **YAML** sections will all render properly with syntax highlighting.  
-
-Do you want me to also prepare the **Runbooks pages** (`k8s-oncall.md` and `cicd-troubleshooting.md`) in the same clean style so your site looks like a full DevOps knowledge base?
